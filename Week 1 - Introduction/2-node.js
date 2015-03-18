@@ -1,5 +1,3 @@
-/*
-
 var http = require('http');
 
 var server = http.createServer(function(req, resp) {
@@ -9,15 +7,3 @@ var server = http.createServer(function(req, resp) {
 
 server.listen(8000);
 console.log('Server is running');
-*/
-
-
-
-/*
-*/
-/*
-*/
-/*
-*/
-/*
-*/
