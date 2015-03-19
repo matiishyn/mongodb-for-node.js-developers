@@ -16,4 +16,7 @@ db.things.find()
 db.things.insert({a:1, b:2})
 db.things.find({a:1})
     // { "_id" : ObjectId("550955912c54765c769d46ea"), "a" : 1, "b" : 2 }
-db.things.find().pretty()
+db.things.find().pretty();
+
+
+mongorestore dump // 
