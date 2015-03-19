@@ -1,4 +1,4 @@
-/*
+
 1. install latest mongoDB
 2. add 'bin' to 'path' system variable
 3. add data folder
@@ -6,7 +6,7 @@
     md \data\db\
 4. run 'mongod' to start service
 5. in separate cmd run 'mongo' and type commands
-*/
+
 
 // COMMANDS
 show dbs // 
