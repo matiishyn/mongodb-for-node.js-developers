@@ -11,3 +11,8 @@ db.people.findOne({"name":"Ivan"}, {"name":true, "_id":false}) // show 'name' fi
 
 // FIND
 db.people.find().pretty() // display json
+db.people.find({"type":"book"}) // search params
+db.people.find({type:"book", student: 19}) // search params, match both criterias
+db.people.find({"type":"book"},{"name":true}) // specify fields that should be returned in documents
+
+$GT $ LT
