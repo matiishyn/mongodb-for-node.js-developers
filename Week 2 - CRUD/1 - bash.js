@@ -32,6 +32,7 @@ db.people.find({ $or: [{name: 'ivan'}, {age: 20}] });// match any query
 // $AND
 db.people.find({ $and: [{name: 'ivan'}, {age: 20}] });// match all queries
 
+//=================================================================================================
 // ARRAY
 	// query
 	db.products.find( { tags : "shiny" } );
@@ -46,6 +47,7 @@ db.people.find({ $and: [{name: 'ivan'}, {age: 20}] });// match all queries
 	// $ALL
 	db.products.find( {fav: {$all: ["apple", "banana"] }} ); // fav array has all the values
 
+//=================================================================================================
 // Dot Notation -> Nested documents
 	// we have
 	{
@@ -58,3 +60,10 @@ db.people.find({ $and: [{name: 'ivan'}, {age: 20}] });// match all queries
 	// how to find it?
 	db.users.find({email: {work: "work@mail"}}); // is incorrect
 	db.users.find({"email.work": "work@mail"}); // is correct
+
+//==================================================================================================
+// CURSOR
+	cursor = db.people.find(); null;
+
+	cursor.hasNext(); // boolean
+	cursor.next(); // document
