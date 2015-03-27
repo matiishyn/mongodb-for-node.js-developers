@@ -64,6 +64,26 @@ db.people.find({ $and: [{name: 'ivan'}, {age: 20}] });// match all queries
 //==================================================================================================
 // CURSOR
 	cursor = db.people.find(); null;
-
 	cursor.hasNext(); // boolean
 	cursor.next(); // document
+
+	// limit
+	cursor = db.people.find(); null;
+	cursor.limit(5); // show only 5 els and shift cursor
+	while (cursor.hasNext()) printjson( cursor.next() ); // print 5 documents
+
+	// sorting
+	cursor = db.people.find(); null;
+	cursor.sort({ name: -1 }); null; // null is to avoid printing now
+	while (cursor.hasNext()) printjson( cursor.next() ); // print documents in reverse order by name
+
+	// chaining
+	cursor = db.people.find(); null;
+	cursor.sort({ name: -1 }).limit(3); null; // order of commands is saved
+
+	// skip
+	cursor = db.people.find(); null;
+	cursor.skip(3); // jump over 3 items
+
+//==================================================================================================
+// Counting Results 
