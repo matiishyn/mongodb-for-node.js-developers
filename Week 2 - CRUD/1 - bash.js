@@ -47,6 +47,16 @@ db.people.find({ $and: [{name: 'ivan'}, {age: 20}] });// match all queries
 	// $ALL
 	db.products.find( {fav: {$all: ["apple", "banana"] }} ); // fav array has all the values
 
+    // a:[4,7,9,3,5]
+    db.products.update({_id:0}, { $set: { "a.2": 1 } }); // changing 3rd element in array
+    db.products.update({_id:0}, { $push: { a: 7 } }); // add element
+    db.products.update({_id:0}, { $pop: { a: 1 } }); // remove last element
+    db.products.update({_id:0}, { $pop: { a: -1 } }); // remove firt element
+    db.products.update({_id:0}, { $pushAll: { a: [1,2,3] } }); // add array and concat
+    db.products.update({_id:0}, { $pop: { a: 5 } }); // remove element with value 5
+    db.products.update({_id:0}, { $popAll: { a: [5,4] } }); // remove any occurance of any of this values
+    db.products.update({_id:0}, { $addToSet: { a: 7 } }); // add element if not exist yet, otherwise do nothing
+
 //=================================================================================================
 // Dot Notation -> Nested documents
 	// we have
@@ -87,3 +97,17 @@ db.people.find({ $and: [{name: 'ivan'}, {age: 20}] });// match all queries
 
 //==================================================================================================
 // Counting Results 
+db.scores.count({key: 'val'}); // get number
+
+// Update === replacement
+db.people.update({name:"John"}, {name:"Nick", salary:5000}); // update(query, newData), all not-existing fields in second param will be removed
+
+// $SET
+db.people.update({name:"John"}, {$set:{ name: "Nick" }}); // update or create field if not exist
+db.people.update({name:"John"}, {$inc:{ age: 1 }}); // increment field, n->n+1, Or create new field: 1
+
+// $UNSET
+db.people.update({name:"Jones"}, {$unset: {profession: 1}}); // remove field in found document(s)
+
+// UPSERTS
+
