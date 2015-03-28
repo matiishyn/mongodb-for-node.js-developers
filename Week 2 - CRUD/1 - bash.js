@@ -110,4 +110,13 @@ db.people.update({name:"John"}, {$inc:{ age: 1 }}); // increment field, n->n+1, 
 db.people.update({name:"Jones"}, {$unset: {profession: 1}}); // remove field in found document(s)
 
 // UPSERTS
+db.people.update({name:"John"}, {$set:{ name: "Nick" }}); // update only if there's doc with name:"John", otherwise do nothing
+db.people.update({name:"John"}, {$set:{ name: "Nick" }}, {upsert: true}); // update only if there's doc with name:"John", otherwise INSERT a new record
 
+// MULTI_UPDATE
+db.people.update({}, {$set:{ title: "Dr." }}, { multi: true }); // update more than one document
+
+// Removing Data
+db.people.remove({ name: "Alice" });
+db.people.remove({}); // remove all, leave indexes
+db.people.drop(); // drop collection - faster, discard indexes
