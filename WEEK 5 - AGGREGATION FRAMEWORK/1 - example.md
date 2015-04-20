@@ -13,7 +13,7 @@ Write the aggregation query that will find the number of products by category of
 
 Have the resulting key be called "num_products," as in the video lesson. Hint, you just need to change which key you are aggregating on relative to the examples shown in the lesson.
 
-```bash
+```javascript
 db.products.aggregate([
     {$group:
      {
