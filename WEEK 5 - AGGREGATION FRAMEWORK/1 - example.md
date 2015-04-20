@@ -16,10 +16,10 @@ Have the resulting key be called "num_products," as in the video lesson. Hint, y
 ```javascript
 db.products.aggregate([
     {$group:
-     {
-	 _id:"$category",
-	 num_products:{$sum:1}
-     }
+        {
+            _id:"$category",
+            num_products:{$sum:1}
+        }
     }
 ])
 ```
