@@ -4,28 +4,32 @@ var express = require('express'),
   MongoClient = require('mongodb').MongoClient,
   Server = require('mongodb').Server;
 
-var mongoclient = new MongoClient(new Server('localhost', 27017, {'native_parser': true}));
+app.engine('html', cons.swig);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
 
-var db = mongoclient.db('course'); // use 'course' db
+var mongoclient = new MongoClient(new Server("localhost", 27017));
+var db = mongoclient.db('course');
 
-app
-  .engine('html', cons.swig)
-  .set('view engine', 'html')
-  .set('views', __dirname + '/views')
+app.get('/', function(req, res){
 
-  .get('/', function (req, resp) {
-    db.collection('hello').findOne({}, function (err, doc) {
-      if (err) throw err;
-      console.log('ERR=',err)
-      //resp.render('express-swig', doc);
-    });
-    // check in mongo shell
-    // db.hello.find()
+  // Find one document in our collection
+  db.collection('hello').findOne({}, function(err, doc) {
+
+    if(err) throw err;
+
+    res.render('hello', doc);
   });
+});
 
+app.get('*', function(req, res){
+  res.send('Page Not Found', 404);
+});
 
-mongoclient.open(function (err, mongoclient) {
-  if (err) throw err;
-  app.listen(8080);
-  console.log('Express on 8080');
+mongoclient.open(function(err, mongoclient) {
+
+  if(err) throw err;
+
+  app.listen(8082);
+  console.log('Express server started on port 8082');
 });
