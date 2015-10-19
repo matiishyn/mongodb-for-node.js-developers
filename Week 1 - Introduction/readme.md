@@ -19,11 +19,20 @@ db.things.save({})
 db.things.find().pretty()
 ```
 
-### hello world nodejs
+### Hello World on Node.js
 [2-node.js](2-node.js)
 
-### hello world nodejs
+### Hello World, MondoDB Style
 [hello-world-mongodb.js](hello-world-mongodb.js)
+
+### Hello World using Express
+[3-express.js](3-express.js)
+
+### Hello World using Express and Swig
+[express-swig.js](express-swig.js)
+
+### Hello World using Express, Swig, and MongoDB 
+[5-mongo.js](5-mongo.js)
 
 
 ### YouTube videos sources
@@ -32,3 +41,5 @@ db.things.find().pretty()
 - [quick intro to the mongo shell 2](https://www.youtube.com/watch?v=j2v865GGS2A)
 - [hello world nodejs](https://www.youtube.com/watch?v=Fv5Q_02BKrM)
 - [hello world mongodb 2](https://www.youtube.com/watch?v=SgQv3KWEGDc)
+- [hello world express swig](https://www.youtube.com/watch?v=0aG8aBUP6nQ)
+- [hello world express swig and mongo 2](https://www.youtube.com/watch?v=KJMHteZRyXQ)
