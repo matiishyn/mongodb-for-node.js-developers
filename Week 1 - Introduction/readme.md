@@ -20,19 +20,19 @@ db.things.find().pretty()
 ```
 
 ### Hello World on Node.js
-[2-node.js](2-node.js)
+[2-node.js](src/2-node.js)
 
 ### Hello World, MondoDB Style
-[hello-world-mongodb.js](hello-world-mongodb.js)
+[hello-world-mongodb.js](src/hello-world-mongodb.js)
 
 ### Hello World using Express
-[3-express.js](3-express.js)
+[3-express.js](src/3-express.js)
 
 ### Hello World using Express and Swig
-[express-swig.js](express-swig.js)
+[express-swig.js](src/express-swig.js)
 
 ### Hello World using Express, Swig, and MongoDB 
-[5-mongo.js](5-mongo.js)
+[5-mongo.js](src/5-mongo.js)
 
 
 ### YouTube videos sources
