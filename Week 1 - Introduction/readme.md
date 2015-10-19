@@ -13,10 +13,22 @@
 show dbs #show all available DBs
 use demo #switch to DB. (and create if not exists)
 db.myColl.find() #usind current DB find all documents from 'myColl' collection
+db.insert({<JSON document>})
+
+db.things.save({})
+db.things.find().pretty()
 ```
+
+### hello world nodejs
+[2-node.js](2-node.js)
+
+### hello world nodejs
+[hello-world-mongodb.js](hello-world-mongodb.js)
 
 
 ### YouTube videos sources
 - [Installing MongoDB windows](https://www.youtube.com/watch?v=sBdaRlgb4N8)
 - [Installing MongoDB mac](https://www.youtube.com/watch?v=_WJ8m5QHvwc)
 - [quick intro to the mongo shell 2](https://www.youtube.com/watch?v=j2v865GGS2A)
+- [hello world nodejs](https://www.youtube.com/watch?v=Fv5Q_02BKrM)
+- [hello world mongodb 2](https://www.youtube.com/watch?v=SgQv3KWEGDc)
