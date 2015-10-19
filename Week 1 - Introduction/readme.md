@@ -34,6 +34,28 @@ db.things.find().pretty()
 ### Hello World using Express, Swig, and MongoDB 
 [5-mongo.js](src/5-mongo.js)
 
+### Express: Handling GET Requests
+[6-get.js](src/6-get.js)
+
+## Homework
+### Homework 1.1
+0. run MongoDB server by `mongod [--dbpath=/data/db]`
+1. unzip downloaded
+2. open `cmd` inside `\hw1`
+3. restore DB by `mongorestore dump`
+4. Run `mongo` and commands:
+```shell
+use m101 
+db.hw1_1.findOne()
+```
+5. **The answer is `Hello from MongoDB!`**
+
+### Homework 1.2
+1. The answer is `I like kittens`
+
+### Homework 1.3
+1. The answer is `Hello, Agent 007.`
+
 
 ### YouTube videos sources
 - [Installing MongoDB windows](https://www.youtube.com/watch?v=sBdaRlgb4N8)
@@ -43,3 +65,5 @@ db.things.find().pretty()
 - [hello world mongodb 2](https://www.youtube.com/watch?v=SgQv3KWEGDc)
 - [hello world express swig](https://www.youtube.com/watch?v=0aG8aBUP6nQ)
 - [hello world express swig and mongo 2](https://www.youtube.com/watch?v=KJMHteZRyXQ)
+- [get requests 2](https://www.youtube.com/watch?v=DZkLTikYqc4)
+- [mongodb is schemaless](https://www.youtube.com/watch?v=uKB-Hoqs6zI)
