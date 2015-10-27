@@ -171,3 +171,20 @@ db.people.remove({name: 'Alice'}); // remove
 ```
 
 ## Node.js Driver and CRUD
+see files in `src` folder
+
+# Homework
+## Homework 2.1
+### Process
+import downloaded csv file
+```
+mongoimport --type csv --headerline weather_data.csv -d weather -c data
+```
+query for result
+```
+use weather;
+db.data.find({"Wind Direction": {$gt: 180, $lt: 360}}).sort({"Temperature": 1}).limit(1).pretty();
+```
+
+### Answer
+`New Mexico`
