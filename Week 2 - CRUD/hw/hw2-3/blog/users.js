@@ -31,7 +31,6 @@ function UsersDAO(db) {
         // TODO: hw2.3
         // INSERT INTO db.users
         users.insert(user, function(err, result) {
-            "use strict";
             callback(err, user);
         });
 

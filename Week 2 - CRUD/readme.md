@@ -188,3 +188,9 @@ db.data.find({"Wind Direction": {$gt: 180, $lt: 360}}).sort({"Temperature": 1}).
 
 ### Answer
 `New Mexico`
+
+## Homework 2.2
+My solution is not correct :(
+
+## Homework 2.3
+Go to (users.js)[hw/hw2-3/blog/users.js] 31 line.
