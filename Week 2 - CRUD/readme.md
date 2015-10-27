@@ -193,4 +193,5 @@ db.data.find({"Wind Direction": {$gt: 180, $lt: 360}}).sort({"Temperature": 1}).
 My solution is not correct :(
 
 ## Homework 2.3
-Go to [users.js](hw/hw2-3/blog/users.js) 31 line.
+Go to [users.js](hw/hw2-3/blog/users.js) 
+31 and 66 lines.
