@@ -259,5 +259,130 @@ db.products.aggregate([
 ```
 
 ### Using `$limit` and `$skip`
+[YouTube - m101 31 skip limit](https://www.youtube.com/watch?v=o5hzYKXUyrU)
 
+```js
+db.products.aggregate([
+    {$match:...},
+    {$group:...},
+    {$project:...},
+    {$sort:...},
+    
+    {$skip:10},
+    {$limit:5}
+])
+```
+BUT, if you have limited and then skipped more than limited
+```js
+    {$limit:5},
+    {$skip:10}
+```
+then result will be 0 since there's nothing to show
 
+### Revisiting `$first` and `$last`
+```js
+ db.zips.aggregate([
+     /* get the population of every city in every state */
+     {$group:
+      {
+ 	 _id: {state:"$state", city:"$city"},
+ 	 population: {$sum:"$pop"},
+      }
+     },
+      /* sort by state, population */
+     {$sort: 
+      {"_id.state":1, "population":-1}
+     },
+ 
+     /* group by state, get the first item in each group */
+     {$group: 
+      {
+ 	 _id:"$_id.state",
+ 	 city: {$first: "$_id.city"},
+ 	 population: {$first:"$population"}
+      }
+     },
+ 
+     /* now sort by state again */
+     {$sort:
+      {"_id":1}
+     }
+ ])
+```
+
+### Using `$unwind`
+To unjoin the data from array. Example:
+```js
+{a:1,b:[2,3]}
+
+//$unwind: "$b"
+{a:1,b:2}
+{a:1,b:3}
+```
+
+Example with Blog app
+```js
+db.posts.aggregate([
+    /* unwind by tags */
+    {"$unwind":"$tags"},
+    /* now group by tags, counting each tag */
+    {"$group": 
+     {"_id":"$tags",
+      "count":{$sum:1}
+     }
+    },
+    /* sort by popularity */
+    {"$sort":{"count":-1}},
+    /* show me the top 10 */
+    {"$limit": 10},
+    /* change the name of _id to be tag */
+    {"$project":
+     {_id:0,
+      'tag':'$_id',
+      'count' : 1
+     }
+    }
+])
+```
+
+### Double `$unwind`
+```js
+db.inventory.drop();
+db.inventory.insert({'name':"Polo Shirt", 'sizes':["Small", "Medium", "Large"], 'colors':['navy', 'white', 'orange', 'red']})
+db.inventory.insert({'name':"T-Shirt", 'sizes':["Small", "Medium", "Large", "X-Large"], 'colors':['navy', "black",  'orange', 'red']})
+db.inventory.insert({'name':"Chino Pants", 'sizes':["32x32", "31x30", "36x32"], 'colors':['navy', 'white', 'orange', 'violet']})
+db.inventory.aggregate([
+    {$unwind: "$sizes"},
+    {$unwind: "$colors"},
+    /* create the color array */
+    {$group: 
+     {
+	'_id': {name:"$name",size:"$sizes"},
+	 'colors': {$push: "$colors"},
+     }
+    },
+    /* create the size array */
+    {$group: 
+     {
+	'_id': {'name':"$_id.name",
+		'colors' : "$colors"},
+	 'sizes': {$push: "$_id.size"}
+     }
+    },
+    /* reshape for beauty */
+    {$project: 
+     {
+	 _id:0,
+	 "name":"$_id.name",
+	 "sizes":1,
+	 "colors": "$_id.colors"
+     }
+    }
+])
+```
+
+### SQL to Aggregation mapping Chart
+[link](https://docs.mongodb.org/manual/reference/sql-aggregation-comparison/)
+
+### Limitations
+[YouTube - limitations of aggregation](https://www.youtube.com/watch?v=U_gRSxEq3c0)
