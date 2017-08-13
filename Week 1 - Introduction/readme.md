@@ -45,8 +45,11 @@ c.next()                        # Next found object/document
 ### Hello World using Express
 [3-express.js](src/3-express.js)
 
-### Hello World using Express and Swig
+### Hello World using Express and Swig (OLD)
 [express-swig.js](src/express-swig.js)
+
+### Hello World using Express and Swig (NEW)([video](https://www.youtube.com/watch?time_continue=14&v=Xww8NV71npM))
+[express-swig.js](src/express-template.js)
 
 ### Hello World using Express, Swig, and MongoDB 
 [5-mongo.js](src/5-mongo.js)
