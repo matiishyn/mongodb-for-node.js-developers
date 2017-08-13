@@ -8,7 +8,7 @@
 1. Run MongoDB server by running `mongod` in console 
 2. In separate console run `mongo`. And here you may run queries
 
-### Intro to Mongo Shell [video](https://www.youtube.com/watch?time_continue=83&v=8To9enkSUHI)
+### Intro to Mongo Shell ([video](https://www.youtube.com/watch?time_continue=83&v=8To9enkSUHI))
 ```bash
 help                # show all commands
 
@@ -39,7 +39,7 @@ c.next()                        # Next found object/document
 ### Hello World on Node.js
 [2-node.js](src/2-node.js)
 
-### Hello World, MondoDB Style
+### Hello World, MondoDB Style ([video](https://www.youtube.com/watch?time_continue=8&v=u3FLcQmaj1E))
 [hello-world-mongodb.js](src/hello-world-mongodb.js)
 
 ### Hello World using Express

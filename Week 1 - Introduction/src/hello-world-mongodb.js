@@ -1,11 +1,11 @@
-var MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 
 // Open the connection to the server
-MongoClient.connect('mongodb://localhost:27017/test', function (err, db) {
+MongoClient.connect('mongodb://localhost:27017/dbname', function (err, db) {
   if (err) throw err;
 
-  // Find document in collection
-  db.collection('coll').findOne({}, function (err, doc) {
+  // Find one document in collection
+  /* db.collection('coll').findOne({}, function (err, doc) {
     if (err) throw err;
 
     // print result
@@ -13,7 +13,16 @@ MongoClient.connect('mongodb://localhost:27017/test', function (err, db) {
 
     // close db
     db.close();
+  }); */
+
+  // or find all docs
+  db.collection('movies').find({}).toArray((err, docs) => {
+    docs.forEach(doc => {
+      console.dir(doc);
+    });
+
+    // close db
+    db.close();
   });
 
-  console.log('Called findOne');
 });
