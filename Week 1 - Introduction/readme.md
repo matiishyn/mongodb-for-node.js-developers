@@ -8,15 +8,32 @@
 1. Run MongoDB server by running `mongod` in console 
 2. In separate console run `mongo`. And here you may run queries
 
-### Intro to Mongo Shell
+### Intro to Mongo Shell [video](https://www.youtube.com/watch?time_continue=83&v=8To9enkSUHI)
 ```bash
-show dbs #show all available DBs
-use demo #switch to DB. (and create if not exists)
-db.myColl.find() #usind current DB find all documents from 'myColl' collection
+help                # show all commands
+
+# DB
+show dbs            # show all available DBs
+use demo            # switch to DB. (and create if not exists)
+
+# Collections
+# Read
+db.myColl.find()            # usind current DB find all documents from 'myColl' collection
+db.<col>.find().pretty()    # pretty json 
+db.movies.find({year:1975}) # select where
+
+# Create
 db.insert({<JSON document>})
+db.movies.insertOne({title:'Jaws', year:1975, imdb:'tt0073195'})
+
 
 db.things.save({})
 db.things.find().pretty()
+
+# Cursor
+var c = db.movies.find()        # cursor object
+c.hasNext()                     # {Boolean}
+c.next()                        # Next found object/document
 ```
 
 ### Hello World on Node.js
