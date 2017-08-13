@@ -1,13 +1,15 @@
-var express = require('express'),
+const express = require('express'),
   app = express();
 
-app
-  .get('/', function (req, resp) {
-    resp.send('Hello');
-  })
-  .get('*', function (req, resp) {
-    resp.status(404).send('Not found');
-  })
-  .listen(8080);
+app.get('/', function (req, resp) {
+  resp.send('Hello');
+});
 
-console.log('Express on 8080');
+app.use((req, res) => {
+  res.sendStatus(404);
+});
+
+const server = app.listen(8080, () => {
+  const port = server.address().port;
+  console.log('Listening on port %s', port);
+});
