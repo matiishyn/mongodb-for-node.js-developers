@@ -8,7 +8,7 @@
 1. Run MongoDB server by running `mongod` in console 
 2. In separate console run `mongo`. And here you may run queries
 
-### Intro to Mongo Shell ([video](https://www.youtube.com/watch?time_continue=83&v=8To9enkSUHI))
+### Intro to Mongo Shell ([video](https://www.youtube.com/watch?v=8To9enkSUHI))
 ```bash
 help                # show all commands
 
@@ -39,7 +39,7 @@ c.next()                        # Next found object/document
 ### Hello World on Node.js
 [2-node.js](src/2-node.js)
 
-### Hello World, MondoDB Style ([video](https://www.youtube.com/watch?time_continue=8&v=u3FLcQmaj1E))
+### Hello World, MondoDB Style ([video](https://www.youtube.com/watch?v=u3FLcQmaj1E))
 [hello-world-mongodb.js](src/hello-world-mongodb.js)
 
 ### Hello World using Express
@@ -48,11 +48,11 @@ c.next()                        # Next found object/document
 ### Hello World using Express and Swig (OLD)
 [express-swig.js](src/express-swig.js)
 
-### Hello World using Express and Swig (NEW)([video](https://www.youtube.com/watch?time_continue=14&v=Xww8NV71npM))
+### Hello World using Express and Swig (NEW)([video](https://www.youtube.com/watch?v=Xww8NV71npM))
 [express-swig.js](src/express-template.js)
 
-### Hello World using Express, Swig, and MongoDB 
-[5-mongo.js](src/5-mongo.js)
+### Hello World using Express, Swig, and MongoDB ([video](https://www.youtube.com/watch?v=S5z336ijwUE))
+[5-mongo-2.js](src/5-mongo.js)
 
 ### Express: Handling GET Requests
 [6-get.js](src/6-get.js)
