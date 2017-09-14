@@ -60,8 +60,10 @@ c.next()                        # Next found object/document
 ## Homework
 ### Homework 1.1
 0. run MongoDB server by `mongod [--dbpath=/data/db]`
+`mongod --dbpath ~/mongo-data/db`
 1. unzip downloaded
 2. open `cmd` inside `\hw1`
+`ls` -> `dump`
 3. restore DB by `mongorestore dump`
 4. Run `mongo` and commands:
 ```shell
@@ -87,3 +89,6 @@ db.hw1_1.findOne()
 - [hello world express swig and mongo 2](https://www.youtube.com/watch?v=KJMHteZRyXQ)
 - [get requests 2](https://www.youtube.com/watch?v=DZkLTikYqc4)
 - [mongodb is schemaless](https://www.youtube.com/watch?v=uKB-Hoqs6zI)
+
+## MongoMart
+[video](https://www.youtube.com/watch?v=C_1gx_Td20A)
