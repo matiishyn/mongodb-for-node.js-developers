@@ -2,10 +2,10 @@
 
 ## Content
 1. [find() and Cursors in the Node.js Driver](https://www.youtube.com/watch?v=XCjpSq7H_G4)
-1. [Projection in the Node.js Driver]()
-1. [The CrunchBase Dataset]()
-1. [Query Operators in the Node.js Driver]()
-1. [$regex in the Node.js Driver]()
+1. [Projection in the Node.js Driver](https://www.youtube.com/watch?v=p4d8ux834b4)
+1. [The CrunchBase Dataset](https://www.youtube.com/watch?v=pdun3EPqwDs)
+1. [Query Operators in the Node.js Driver](https://www.youtube.com/watch?v=b39cyy75Lbs)
+1. [$regex in the Node.js Driver](https://www.youtube.com/watch?v=JOzJcUVK-RY)
 1. [Dot Notation in the Node.js Driver]()
 1. [Dot Notation on Embedded Documents in Arrays]()
 1. [Sort, Skip, and Limit in the Node.js Driver]()
