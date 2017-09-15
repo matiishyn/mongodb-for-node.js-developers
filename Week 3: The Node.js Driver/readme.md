@@ -6,10 +6,10 @@
 1. [The CrunchBase Dataset](https://www.youtube.com/watch?v=pdun3EPqwDs)
 1. [Query Operators in the Node.js Driver](https://www.youtube.com/watch?v=b39cyy75Lbs)
 1. [$regex in the Node.js Driver](https://www.youtube.com/watch?v=JOzJcUVK-RY)
-1. [Dot Notation in the Node.js Driver]()
-1. [Dot Notation on Embedded Documents in Arrays]()
-1. [Sort, Skip, and Limit in the Node.js Driver]()
-1. [insertOne() and insertMany() in the Node.js Driver]()
+1. [Dot Notation in the Node.js Driver](https://www.youtube.com/watch?v=vHpW3l0wOmA)
+1. [Dot Notation on Embedded Documents in Arrays](https://www.youtube.com/watch?v=nYcV-N3QlBk)
+1. [Sort, Skip, and Limit in the Node.js Driver](https://www.youtube.com/watch?v=l4D7n0ntD9Y)
+1. [insertOne() and insertMany() in the Node.js Driver](https://www.youtube.com/watch?v=tDd4PBOmlMk)
 1. [deleteOne() and deleteMany() in the Node.js Driver]()
 
 ## find() and Cursors in the Node.js Driver
