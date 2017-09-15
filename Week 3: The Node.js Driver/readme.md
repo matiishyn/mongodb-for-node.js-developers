@@ -10,7 +10,7 @@
 1. [Dot Notation on Embedded Documents in Arrays](https://www.youtube.com/watch?v=nYcV-N3QlBk)
 1. [Sort, Skip, and Limit in the Node.js Driver](https://www.youtube.com/watch?v=l4D7n0ntD9Y)
 1. [insertOne() and insertMany() in the Node.js Driver](https://www.youtube.com/watch?v=tDd4PBOmlMk)
-1. [deleteOne() and deleteMany() in the Node.js Driver]()
+1. [deleteOne() and deleteMany() in the Node.js Driver](https://www.youtube.com/watch?v=gNPsatcQPUA)
 
 ## find() and Cursors in the Node.js Driver
 
@@ -25,3 +25,16 @@ show dbs
 use crunchbase
 db.companies.find().count()
 ```
+
+# Homework
+## 3.1
+Answer: *When we call a cursor method passing a callback function to process query results*
+
+## 3.2
+Answer: *Seamus, Bob*
+
+## 3.3
+Answer: *169*
+
+## 3.4
+Answer: *48*
